@@ -183,5 +183,3 @@ totalShifts = totalShifts * 58
 Debug.Print "Total Shifts = " & totalShifts
 
 End Sub
-
-
