@@ -16,3 +16,26 @@
 // Brinell > Approx. Tensile Strength
 // >> y = 0.2736x + 18.668
 
+function vickersFromRockwell(Rockwell) {
+    let x_rw = Rockwell;
+    let y_vk
+
+    y_vk =    ( 0.000111 * Math.pow(x_rw, 4) ) 
+            - ( 0.014722 * Math.pow(x_rw, 3) )
+            + ( 0.845702 * Math.pow(x_rw, 2) )
+            - ( 15.166443 * x_rw ) 
+            + 303.499402
+
+    return y_vk
+}
+
+const queryString = window.location.search;
+console.log("Query String = " + queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+let input_rw = urlParams.get('rockwell');
+console.log("Input Value = " + input_rw);
+
+let output_vk = vickersFromRockwell(input_rw)
+console.log(input_rw +" Rockwell = " + output_vk + " Vickers")
