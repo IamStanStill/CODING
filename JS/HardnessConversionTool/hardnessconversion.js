@@ -78,14 +78,19 @@ const output_brinellFromVickers = brinellFromVickers(input_vk);
 const output_vickersFromBrinell = vickersFromBrinell(input_br);
 
 if(input_rw){
+    //Vickers from Rockwell
     console.log(input_rw +" Rockwell = " + output_vickersFromRockwell + " Vickers")
 }
 
 if(input_vk){
+    //Rockwell from Vickers
     console.log(input_vk +" Vickers = " + output_rockwellFromVickers + " Rockwell")
+
+    //Brinell from Vickers
     console.log(input_vk +" Vickers = " + output_brinellFromVickers + " Brinell")
 }
 
 if(input_br) {
+    //Vickers from Brinell
     console.log(input_br +" Brinell = " + output_vickersFromBrinell + " Vickers")
 }
