@@ -4,3 +4,8 @@
 body {
     font-family: "Lucida Console", Courier, monospace;
 }
+div {
+    padding: 8px;
+    border: 1px solid #888;
+    margin-bottom: 6px;
+}

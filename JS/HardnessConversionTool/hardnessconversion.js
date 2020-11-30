@@ -26,6 +26,8 @@ function vickersFromRockwell(Rockwell) {
             - ( 15.166443 * x_rw ) 
             + 303.499402;
 
+    y_vk = Math.round((y_vk + Number.EPSILON) * 1 ) / 1; //0 DP
+
     return y_vk;
 }
 
@@ -38,6 +40,8 @@ function rockwellFromVickers(Vickers) {
             + (0.2748 * x_vk)
             - 29.619;
 
+    y_rw = Math.round((y_rw + Number.EPSILON) * 10 ) / 10; //1 DP
+
     return y_rw;
 }
 
@@ -47,6 +51,8 @@ function brinellFromVickers(Vickers) {
 
     y_br = ( 0.9317 * x_vk ) + 4.7088;
 
+    y_br = Math.round((y_br + Number.EPSILON) * 1 ) / 1; //0 DP
+
     return y_br;
 }
 
@@ -55,6 +61,8 @@ function vickersFromBrinell(Brinell) {
     let y_vk;
 
     y_vk = ( 1.0732 * x_br ) - 5.0422;
+
+    y_vk = Math.round((y_vk + Number.EPSILON) * 1 ) / 1; //0 DP
 
     return y_vk;
 }
@@ -71,26 +79,3 @@ const input_br = urlParams.get('brinell');
 console.log("Rockwell Input = " + input_rw);
 console.log("Vickers Input = " + input_vk);
 console.log("Brinell Input = " + input_br);
-
-const output_vickersFromRockwell = vickersFromRockwell(input_rw);
-const output_rockwellFromVickers = rockwellFromVickers(input_vk);
-const output_brinellFromVickers = brinellFromVickers(input_vk);
-const output_vickersFromBrinell = vickersFromBrinell(input_br);
-
-if(input_rw){
-    //Vickers from Rockwell
-    console.log(input_rw +" Rockwell = " + output_vickersFromRockwell + " Vickers")
-}
-
-if(input_vk){
-    //Rockwell from Vickers
-    console.log(input_vk +" Vickers = " + output_rockwellFromVickers + " Rockwell")
-
-    //Brinell from Vickers
-    console.log(input_vk +" Vickers = " + output_brinellFromVickers + " Brinell")
-}
-
-if(input_br) {
-    //Vickers from Brinell
-    console.log(input_br +" Brinell = " + output_vickersFromBrinell + " Vickers")
-}
