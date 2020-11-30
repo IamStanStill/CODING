@@ -27,7 +27,6 @@ function vickersFromRockwell(Rockwell) {
             + 303.499402
 
     return y_vk
-
 }
 
 const queryString = window.location.search;
