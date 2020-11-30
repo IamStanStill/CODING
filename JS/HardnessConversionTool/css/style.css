@@ -2,10 +2,9 @@
     display: none;
 }
 body {
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
 div {
     padding: 8px;
-    border: 1px solid #888;
     margin-bottom: 6px;
 }
