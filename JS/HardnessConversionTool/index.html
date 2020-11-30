@@ -14,12 +14,26 @@
 </head>
 
 <body>
-<div id="divOutput">
-    
-</div>
+<div id="divOutput_vickersFromRockwell"></div>
+<div id="divOutput_rockwellFromVickers"></div>
+<div id="divOutput_brinellFromVickers"></div>
+<div id="divOutput_vickersFromBrinell"></div>
+
+
 
 <script type="text/javascript">
-    document.getElementById("divOutput").innerHTML = input_rw +" Rockwell = " + output_vk + " Vickers";
+if(input_rw) {
+    document.getElementById("divOutput_vickersFromRockwell").innerHTML = input_rw +" Rockwell = " + output_vickersFromRockwell + " Vickers";
+}
+if(input_vk) {
+    document.getElementById("divOutput_rockwellFromVickers").innerHTML = input_vk +" Vickers = " + output_rockwellFromVickers + " Rockwell";    
+    
+    document.getElementById("divOutput_brinellFromVickers").innerHTML = input_vk +" Vickers = " + output_brinellFromVickers + " Brinell";
+}
+
+if(input_br){
+    document.getElementById("divOutput_vickersFromBrinell").innerHTML = input_br +" Brinell = " + output_vickersFromBrinell + " Vickers";
+}
 </script>
 </body>
 </html>
