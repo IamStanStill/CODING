@@ -1,3 +1,6 @@
 #turnkey-credit {
     display: none;
 }
+body {
+    font-family: "Lucida Console", Courier, monospace;
+}
