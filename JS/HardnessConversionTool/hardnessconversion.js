@@ -27,6 +27,7 @@ function vickersFromRockwell(Rockwell) {
             + 303.499402
 
     return y_vk
+
 }
 
 const queryString = window.location.search;
@@ -34,8 +35,8 @@ console.log("Query String = " + queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
-let input_rw = urlParams.get('rockwell');
+const input_rw = urlParams.get('rockwell');
 console.log("Input Value = " + input_rw);
 
-let output_vk = vickersFromRockwell(input_rw)
+const output_vk = vickersFromRockwell(input_rw)
 console.log(input_rw +" Rockwell = " + output_vk + " Vickers")
