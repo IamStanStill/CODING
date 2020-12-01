@@ -14,18 +14,72 @@
 </head>
 
 <body>
-<h3>Rockwell to Vickers</h3>
-<div id="divOutput_vickersFromRockwell"></div>
-<h3>Vickers to Rockwell</h3>
-<div id="divOutput_rockwellFromVickers"></div>
-<h3>Vickers to Brinell</h3>
-<div id="divOutput_brinellFromVickers"></div>
-<h3>Brinell to Vickers</h3>
-<div id="divOutput_vickersFromBrinell"></div>
 
+<!-- Rockwell FROM Vickers -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_rockwellFromVickers" type="number" oninput="rockwellFromVickers(this.value, 'output_rockwellFromVickers')" onchange="rockwellFromVickers(this.value, 'output_rockwellFromVickers')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_rockwellFromVickers">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Rockwell (HRc)</span>
+    </div>
+</div>
 
+<!-- Vickers FROM Rockwell -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Rockwell (HRc)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromRockwell" type="number" oninput="vickersFromRockwell(this.value, 'output_vickersFromRockwell')" onchange="vickersFromRockwell(this.value, 'output_vickersFromRockwell')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromRockwell">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
 
-<script type="text/javascript">
+<!-- Vickers FROM Brinell-->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Brinell (HB)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromBrinell" type="number" oninput="vickersFromBrinell(this.value, 'output_vickersFromBrinell')" onchange="vickersFromBrinell(this.value, 'output_vickersFromBrinell')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromBrinell">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
+
+<!-- Brinell FROM Vickers -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_brinellFromVickers" type="number" oninput="brinellFromVickers(this.value, 'output_brinellFromVickers')" onchange="brinellFromVickers(this.value, 'output_brinellFromVickers')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_brinellFromVickers">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Brinell (HB)</span>
+    </div>
+</div>
+
+<!-- <script type="text/javascript">
 if(input_rw) {
     const output_vickersFromRockwell = vickersFromRockwell(input_rw);
     document.getElementById("divOutput_vickersFromRockwell").innerHTML = input_rw +" Rockwell = " + output_vickersFromRockwell + " Vickers";
@@ -42,6 +96,6 @@ if(input_br){
     const output_vickersFromBrinell = vickersFromBrinell(input_br);
     document.getElementById("divOutput_vickersFromBrinell").innerHTML = input_br +" Brinell = " + output_vickersFromBrinell + " Vickers";
 }
-</script>
+</script> -->
 </body>
 </html>

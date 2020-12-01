@@ -16,8 +16,9 @@
 // Brinell > Approx. Tensile Strength
 // >> y = 0.2736x + 18.668
 
-function vickersFromRockwell(Rockwell) {
+function vickersFromRockwell(Rockwell, ElementID) {
     let x_rw = Rockwell;
+    let elementID = ElementID;
     let y_vk;
 
     y_vk =    ( 0.000111 * Math.pow(x_rw, 4) ) 
@@ -28,43 +29,49 @@ function vickersFromRockwell(Rockwell) {
 
     y_vk = Math.round((y_vk + Number.EPSILON) * 1 ) / 1; //0 DP
 
-    return y_vk;
+    //return y_vk;
+    console.log("Function vickersFromRockwell was run.");
+    document.getElementById(elementID).innerHTML = y_vk;
 }
 
-function rockwellFromVickers(Vickers) {
+function rockwellFromVickers(Vickers, ElementID) {
     let x_vk = Vickers;
+    let elementID = ElementID;
     let y_rw;
 
-    y_rw =    ( 0.0000001 * Math.pow(x_vk, 3) )
-            - ( 0.0003 * Math.pow(x_vk, 2) )
-            + (0.2748 * x_vk)
-            - 29.619;
+    y_rw =  - ( 0.0000000001794084 * Math.pow(x_vk, 4) )
+            + ( 0.0000005101322 * Math.pow(x_vk, 3) )
+            - ( 0.0005927337 * Math.pow(x_vk, 2) )
+            + (0.3701118 * x_vk)
+            - 40.39573;
 
     y_rw = Math.round((y_rw + Number.EPSILON) * 10 ) / 10; //1 DP
 
-    return y_rw;
+    document.getElementById(elementID).innerHTML = y_rw;
 }
 
-function brinellFromVickers(Vickers) {
+function brinellFromVickers(Vickers, ElementID) {
     let x_vk = Vickers;
+    let elementID = ElementID;
     let y_br;
 
     y_br = ( 0.9317 * x_vk ) + 4.7088;
 
     y_br = Math.round((y_br + Number.EPSILON) * 1 ) / 1; //0 DP
 
-    return y_br;
+    document.getElementById(elementID).innerHTML = y_br;
 }
 
-function vickersFromBrinell(Brinell) {
+function vickersFromBrinell(Brinell, ElementID) {
     let x_br = Brinell;
+    let elementID = ElementID;
     let y_vk;
 
     y_vk = ( 1.0732 * x_br ) - 5.0422;
 
     y_vk = Math.round((y_vk + Number.EPSILON) * 1 ) / 1; //0 DP
 
-    return y_vk;
+    document.getElementById(elementID).innerHTML = y_vk;
 }
 
 const queryString = window.location.search;
@@ -72,9 +79,9 @@ console.log("Query String = " + queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
-const input_rw = urlParams.get('rockwell');
-const input_vk = urlParams.get('vickers');
-const input_br = urlParams.get('brinell');
+const input_rw = urlParams.get('rockwell_ui');
+const input_vk = urlParams.get('vickers_ui');
+const input_br = urlParams.get('brinell_ui');
 
 console.log("Rockwell Input = " + input_rw);
 console.log("Vickers Input = " + input_vk);
