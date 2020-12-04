@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Hardness Conversion Tool</title>
+  <meta name="description" content="Dev">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="hardnessconversion.js"></script>
+
+</head>
+
+<body>
+
+<!-- Rockwell FROM Vickers -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_rockwellFromVickers" type="number" oninput="rockwellFromVickers(this.value, 'output_rockwellFromVickers')" onchange="rockwellFromVickers(this.value, 'output_rockwellFromVickers')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_rockwellFromVickers">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Rockwell (HRc)</span>
+    </div>
+</div>
+
+<!-- Brinell FROM Vickers -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_brinellFromVickers" type="number" oninput="brinellFromVickers(this.value, 'output_brinellFromVickers')" onchange="brinellFromVickers(this.value, 'output_brinellFromVickers')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_brinellFromVickers">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Brinell (HB)</span>
+    </div>
+</div>
+
+<!-- Strength FROM Vickers -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_strengthFromVickers" type="number" oninput="strengthFromVickers(this.value, 'output_strengthFromVickers')" onchange="strengthFromVickers(this.value, 'output_strengthFromVickers')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_strengthFromVickers">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Strength (MPa)</span>
+    </div>
+</div>
+
+<!-- Vickers FROM Rockwell -->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Rockwell (HRc)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromRockwell" type="number" oninput="vickersFromRockwell(this.value, 'output_vickersFromRockwell')" onchange="vickersFromRockwell(this.value, 'output_vickersFromRockwell')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromRockwell">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
+
+<!-- Vickers FROM Brinell-->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Brinell (HB)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromBrinell" type="number" oninput="vickersFromBrinell(this.value, 'output_vickersFromBrinell')" onchange="vickersFromBrinell(this.value, 'output_vickersFromBrinell')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromBrinell">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
+
+<!-- Vickers FROM Strength-->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Strength (MPa)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromStrength" type="number" oninput="vickersFromStrength(this.value, 'output_vickersFromStrength')" onchange="vickersFromStrength(this.value, 'output_vickersFromStrength')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromStrength">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
+
+<!-- Vickers FROM Knoop-->
+<div id="container">
+    <div class="col col-1 inputLabel">
+        <span class="label">Knoop (HK)</span>
+    </div>
+    <div class="col col-2 input">
+        <input class="input" id="input_vickersFromKnoop" type="number" oninput="vickersFromKnoop(this.value, 'output_vickersFromKnoop')" onchange="vickersFromKnoop(this.value, 'output_vickersFromKnoop')">
+    </div>
+    <div class="col col-3 output">
+        <span id="output_vickersFromKnoop">&nbsp;</span>
+    </div>
+    <div class="col col-4 outputLabel">
+        <span class="label">Vickers (Hv)</span>
+    </div>
+</div>
+
+</body>
+</html>

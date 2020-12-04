@@ -1,0 +1,45 @@
+#turnkey-credit {
+    display: none;
+}
+
+
+body {
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+div {
+    padding: 8px;
+    margin-bottom: 6px;
+}
+
+h3 {
+    clear: both;
+}
+
+
+#container {
+    clear: both;
+    height: auto;
+    padding: 0;
+}
+
+
+.col{
+    display: block;
+    float: left;
+    margin: 0;
+    line-height: 34px;
+    padding: 0 0 0 8px;
+}
+
+.col-1, .col-4 { width: 120px; }
+.col-2, .col-3 { width: 80px; }
+.col-3 { padding-left: 25px;}
+
+
+input { 
+    width: 72px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 8px;
+}
