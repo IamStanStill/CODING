@@ -1,7 +1,7 @@
 // Hardness Conversion Tool
-// Version: 1.3
+// Version: 1.5
 // Author: Tom Osborne
-// Date: 01/12/2020
+// Date: 04/12/2020
 
 function vickersFromRockwell(Rockwell, ElementID) {
     let x_rw = Rockwell;
