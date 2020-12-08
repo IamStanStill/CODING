@@ -14,6 +14,7 @@ function fib() {
   // even-valued terms.
   
   // Create Fibbonaci Array
+  // https://en.wikipedia.org/wiki/Fibonacci_number
   while (n <= maxNum) {
     n = fibbArr[k] + fibbArr[k - 1];
     fibbArr.push(n)
