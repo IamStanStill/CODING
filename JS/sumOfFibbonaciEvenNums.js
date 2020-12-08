@@ -24,8 +24,8 @@ function fib() {
   
   // Extract the even numbered items and add to new array
   for (let i = 0; i < fibbArr.length; i++) {
-  	if(fibbArr[i] < maxNum && fibbArr[i] % 2 === 0) {
-    	fibbArrEven.push(fibbArr[i]);
+    if(fibbArr[i] < maxNum && fibbArr[i] % 2 === 0) {
+      fibbArrEven.push(fibbArr[i]);
     }
   }
   
