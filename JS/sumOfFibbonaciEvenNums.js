@@ -1,3 +1,8 @@
+// https://projecteuler.net/problem=2
+// By considering the terms in the Fibonacci sequence whose
+// values do not exceed four million, find the sum of the 
+// even-valued terms.
+
 function fib() {
   const maxNum = 4000000;
   const f0 = 0;
@@ -8,10 +13,6 @@ function fib() {
 
   let fibbArr = [f0, f1];
   let fibbArrEven = [];
-	
-  // By considering the terms in the Fibonacci sequence whose
-  // values do not exceed four million, find the sum of the 
-  // even-valued terms.
   
   // Create Fibbonaci Array
   // https://en.wikipedia.org/wiki/Fibonacci_number
