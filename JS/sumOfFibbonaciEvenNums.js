@@ -1,5 +1,5 @@
 // Problem: - https://projecteuler.net/problem=2
-// Answer:  4613732
+// Answer:  4613730
 // By considering the terms in the Fibonacci sequence whose
 // values do not exceed four million, find the sum of the 
 // even-valued terms.
@@ -7,8 +7,8 @@
 
 function fib() {
   const maxNum = 4000000;
-  const f0 = 0;
-  const f1 = 1;
+  const f0 = 1;
+  const f1 = 2;
   let n = 2; 
   let k = 1;
   let sum = 0;
