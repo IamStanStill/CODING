@@ -49,8 +49,8 @@ function hasTwoCandidates(input, targetSum) {
         if (sum == targetSum) {
             //console.log('Found it!');
             answer = a * b;
-            console.log(a, " + ", b, " = ", sum);
-            console.log("The answer for Part 1 is ", answer);
+            console.log(a + " + " + b + " = " + sum);
+            console.log("The answer for Part 1 is", answer);
             break;
         } else if (sum < targetSum) {
             l++
@@ -94,9 +94,9 @@ function hasThreeCandidates(input, targetSum) {
                 sum = a + b + c;
 
                 if(sum == targetSum){
-                    console.log(a, " + ", b, " + ", c, " = ", sum);
+                    console.log(a + " + " + b + " + " + c + " = " + sum);
                     answer = a * b * c;
-                    console.log("The answer for Part 2 is ", answer);
+                    console.log("The answer for Part 2 is", answer);
                     return True;
                 }
             }
