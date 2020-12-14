@@ -1,4 +1,4 @@
-function aoc(input){
+function aoc_p2(input){
     let data = fetch(input)
     .then((response) => response.text())
     .then(data => {
@@ -33,7 +33,7 @@ function hasTwoCandidates(input, targetSum) {
 
     let l = 0;
     let r = inputArr_len - 1;
-    console.log(inputArr_len, l);
+    //console.log(inputArr_len, l);
 
     let sum;
     let a;
@@ -51,10 +51,10 @@ function hasTwoCandidates(input, targetSum) {
                 sum = a + b + c;
 
                 if(sum == targetSum){
-                    console.log(a, b, c, sum);
+                    console.log(a, " + ", b, " + ", c, " = ", sum);
                     answer = a * b * c;
-                    console.log("The answer is ", answer);
-                    break;
+                    console.log("The answer for Part 2 is ", answer);
+                    return True;
                 }
             }
         }
