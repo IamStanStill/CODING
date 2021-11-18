@@ -4,6 +4,7 @@
 // values do not exceed four million, find the sum of the 
 // even-valued terms.
 // See ref: - https://en.wikipedia.org/wiki/Fibonacci_number
+// Extra comment 
 
 function fib() {
   const maxNum = 4000000;   // Limit of sequence
